@@ -80,6 +80,10 @@ body {}
 
 /*header area end css*/
 /*menu area stert css*/
+.slicknav_menu {
+    display: none;
+}
+
 .menubar ul li {
     display: inline-block;
     padding: 10px 25px 0px 0;
@@ -367,14 +371,16 @@ body {}
     color: #fff;
     transition: all .3s;
 }
-.serves-area .serves-weper .img{
+
+.serves-area .serves-weper .img {
     position: relative;
     display: block;
     width: 55px;
     height: 55px;
     margin: auto;
 }
-.serves-area .serves-weper .img img{
+
+.serves-area .serves-weper .img img {
     position: absolute;
     left: 0;
     top: 0;
@@ -384,18 +390,20 @@ body {}
     object-fit: contain;
 
 }
-.serves-area .serves-weper .img img.hover{
+
+.serves-area .serves-weper .img img.hover {
     opacity: 0;
 }
+
 .serves-area .serves-weper:hover {
     background: #F14FA2;
 }
 
-.serves-area .serves-weper:hover .img img.hover{
+.serves-area .serves-weper:hover .img img.hover {
     opacity: 1;
 }
 
-.serves-area .serves-weper:hover .img img.normal{
+.serves-area .serves-weper:hover .img img.normal {
     opacity: 0;
 }
 
@@ -482,22 +490,31 @@ body {}
     position: relative;
 }
 
-.project-itembar ul {}
 
-.project-itembar ul li {
-    display: inline-block;
-    padding-right: 30px;
+
+.project-itembar {}
+
+.project-itembar .mixitup_btn {
+    border: none;
+    background: none;
     font-family: Overpass;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 15px;
+    margin-right: 30px;
     cursor: pointer;
 }
 
-button.mixitup_btn {
-    border: none;
-    background: none;
+.project-itembar .mixitup_btn.mixitup-control-active {
+    color: #FFFFFF;
+    background: #F14FA2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.project-itembar .mixitup_btn:focus {
+    outline: none;
 }
 
 .project-item {
@@ -555,15 +572,6 @@ button.mixitup_btn {
     color: #FFFFFF;
 
 }
-
-
-
-
-
-
-
-
-
 
 /*Project area end css*/
 /*Team-Member area stert css*/
@@ -674,9 +682,6 @@ button.mixitup_btn {
 .member-link ul li a img {
     width: 100%;
 }
-
-
-
 
 /*Team-Member area stert css*/
 /*Plan area stert css*/
@@ -879,8 +884,9 @@ button.mixitup_btn {
 .from-weper form {
     color: #fff;
 }
+
 .from-weper input,
-.from-weper textarea{
+.from-weper textarea {
     width: 90%;
     margin: 0px 27px;
     font-family: Roboto;
@@ -897,18 +903,22 @@ button.mixitup_btn {
     margin-bottom: 30px;
     transition: all .4s ease-in-out 0s;
 }
+
 .from-weper input::placeholder,
-.from-weper textarea::placeholder{
+.from-weper textarea::placeholder {
     color: #fff;
 }
-.from-weper textarea{
+
+.from-weper textarea {
     height: 100px
 }
+
 .from-weper input:focus,
-.from-weper textarea:focus{
+.from-weper textarea:focus {
     outline: none;
-    border-color: rgba(255,255,255,.5);
+    border-color: rgba(255, 255, 255, .5);
 }
+
 .send-btn {
     text-align: center;
 }
@@ -1083,9 +1093,9 @@ input[type="submit"] {
 /*menu area two end css*/
 /*benner-area two stert css*/
 .benner-two {
-    top: 0;
-    width: 98%;
     z-index: -1;
+    top: -1;
+
 }
 
 .banner-weper-two {
@@ -1140,26 +1150,146 @@ input[type="submit"] {
     text-decoration: none;
 }
 
-button#slick-slide-control00 {
-    background: #FFFFFF;
+.slider .slick-dots {
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
-.slick-dots {
-    bottom: 30px;
+.slider .slick-dots li {
+    margin: 0px 5px;
+    padding-bottom: 70px;
 }
 
-.slick-dots li button {
-    width: 10px;
+.slider .slick-dots li button {
     height: 10px;
-    background: #1E1E1E 80%;
+    width: 10px;
+    font-size: 0px;
+    border: 1px solid #fff;
     border-radius: 50%;
-    bottom: 61px;
 }
+
+.slider .slick-dots li.slick-active button {
+    height: 15px;
+    width: 15px;
+    background: #fff;
+}
+
 
 /*benner-area two end css*/
+/*about-us-area two stert css*/
+.about-us-area {
+    margin: 220px 0;
+}
+
+.about-img {}
+
+.about-img img {
+    width: 100%;
+    border-top-left-radius: 145px;
+    border-bottom-right-radius: 145px;
+}
+
+.about-weper-two {
+    margin-left: 53px;
+}
+
+.about-weper-two .title {
+    margin-right: 295px;
+}
+
+.about-weper-two .title h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 53px;
+    color: #1E1E1E;
+    margin: 0;
+}
+
+.about-weper-two .title h3 span {
+    font-weight: 300;
+}
+
+.about-weper-two .title p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 35px;
+    color: #1E1E1E;
+    margin-bottom: 35px;
+}
+
+.about-weper-two .text {}
+
+.about-weper-two .text p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+    color: #939393;
+    margin: 0;
+
+}
+
+.about-text-left {
+    margin-top: 60px;
+}
+
+.about-text-left p {
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 42px;
+    text-align: justify;
+    color: #1E1E1E;
+}
+
+.about-activetion {
+    margin-top: 60px;
+}
+
+.nav-link {
+    padding: 9px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link img {
+    color: #fff;
+    background-color: rgba(30, 30, 30, 0.6);
+}
+
+/*about-us-area two end css*/
+/*Project area two stert*/
+.project-title-two {}
+
+.project-title-two h2 span {
+    font-weight: 300;
+}
+
+.project-title-two p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.project-item.page-two-project:after {
+    content: '';
+}
+
+/*Project area two end*/
 /*company-area  stert css*/
 .compamy-area {
     background: #15AD7D;
+    margin: 100px 0;
 }
 
 .company-weper {}
@@ -1174,10 +1304,8 @@ button#slick-slide-control00 {
 /*company-area  end css*/
 /*team-area  stert css*/
 
-
-
 .team-area {
-    margin: 110px 0;
+    margin: 100px 0;
 }
 
 .section-titel {
@@ -1424,7 +1552,7 @@ button#slick-slide-control00 {
     line-height: 30px;
 }
 
-input#name-two {
+.from-two-wepar input {
     width: 100%;
     padding: 15px 0 15px 15px;
     border: 1px solid #CBCBCB;
@@ -1436,39 +1564,15 @@ input#name-two {
     font-size: 16px;
     line-height: 30px;
     color: #CDC7C7;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
-input#email-two {
-    width: 100%;
-    padding: 15px 0 15px 15px;
-    border: 1px solid #CBCBCB;
-    box-sizing: border-box;
-    border-radius: 5px;
-    font-family: Roboto;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 30px;
-    color: #CDC7C7;
-    margin-bottom: 35px;
+.from-two-wepar input:focus,
+.from-two-wepar textarea:focus {
+    outline-color: #15AD7D;
 }
 
-input#phone-two {
-    width: 100%;
-    padding: 15px 0 15px 15px;
-    border: 1px solid #CBCBCB;
-    box-sizing: border-box;
-    border-radius: 5px;
-    font-family: Roboto;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 30px;
-    color: #CDC7C7;
-}
-
-textarea#message-two {
+.from-two-wepar textarea {
     width: 100%;
     height: 61%;
     padding: 15px 0 0 20px;
@@ -1481,48 +1585,69 @@ textarea#message-two {
     font-size: 16px;
     line-height: 30px;
     color: #CDC7C7;
-    margin-bottom: 32px;
 }
 
-input#send-btn-two {
+.from-two-wepar .submit-btn-two {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
+    width: 30%;
     font-size: 16px;
     line-height: 30px;
     background: #15AD7D;
-    padding: 15px 55px;
     border-radius: 5px;
     padding: 15px 55px;
-    margin: 0;
+    margin-top: 8px;
 }
-/*from-two-area  end css*/
 
+/*from-two-area  end css*/
 /*footer area stert css*/
 .footer-area.page-two-ft {
     background: #1E1E1E;
     margin: 0;
+    position: relative;
 }
-.footer-area.page-two-ft::before{
+
+.footer-area.page-two-ft::before {
     display: none;
 }
+
 .footer-area.page-two-ft .footer-link {
     padding: 175px 0 80px;
 }
-.footer-area.page-two-ft .footer-link a{
+
+.footer-area.page-two-ft .footer-link a {
     transition: all .3s linear;
 }
-.footer-area.page-two-ft .footer-link a:hover{
+
+.footer-area.page-two-ft .footer-link a:hover {
     color: #15AD7D;
-    border-bottom:none;
+    border-bottom: none;
     text-decoration: underline;
 }
+
 /*footer area end css*/
 /*copright area stert css*/
 .copright.page-two-cp {
     background: #15AD7D;
 }
+
+.bottom-to-top {
+    background: #fff;
+    text-align: center;
+    border: 4px solid #1E1E1E;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 1;
+}
+
+.back-to-top img {
+    padding: 50px 50px 0 50px;
+}
+
+.bottom-icon {
+    display: block;
+}
+
 /*copright area end css*/
-
-
-

@@ -1,6 +1,5 @@
 $(document).ready(function () {
-    //here css for mixitup filter
-//    var mixer = mixitup('.mixitup-glary');
+    $('.menubar').slicknav();
     $('.pojicet').slick({
         slidesToShow: 3,
         responsive: [
@@ -20,8 +19,8 @@ $(document).ready(function () {
       }
       ]
     });
-//    pagetwo slider
-     $('.slider').slick({
+    //    pagetwo slider
+    $('.slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -30,6 +29,17 @@ $(document).ready(function () {
         infinite: true,
         speed: 100,
         loop: true,
+        arrows:false,
     });
+    //       here css for mixitup filter
+    var mixer = mixitup('.mixitup-glary');
+    //==== Animate the scroll to top
+    $('.back-to-top').on('click', function (event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: 0,
+        }, 3000);
+    })
 
 });
